@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>꿈꾸는 도서관 - 한 줄 감상</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for a cute, handwritten style -->
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Gamja+Flower&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <i class="fa-solid fa-book-open-reader logo-icon"></i>
+            <h1>꿈꾸는 도서관</h1>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#" class="nav-link active"><i class="fa-solid fa-house"></i> 홈</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fa-solid fa-magnifying-glass"></i> 책 찾기</a></li>
+                <li class="nav-item"><a href="#review-section" class="nav-link"><i class="fa-solid fa-pencil"></i> 한 줄 톡톡</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fa-solid fa-thumbs-up"></i> 추천 도서</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fa-solid fa-bullhorn"></i> 공지사항</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fa-solid fa-user"></i> 마이페이지</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>오늘 읽은 책, 어떤 느낌이었나요?</h2>
+            <p>친구들에게 나만의 한 줄 감상을 들려주세요!</p>
+            <a href="#review-section" class="cta-button">감상 남기러 가기 🚀</a>
+        </div>
+        <div class="hero-image">
+            <img src="images/hero.png" alt="Library Illustration">
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Write Review Section -->
+        <section id="review-section" class="write-review-container">
+            <div class="section-header">
+                <h3>📝 오늘의 한 줄 감상 남기기</h3>
+                <p>책을 읽고 난 느낌을 짧게 기록해보세요.</p>
+            </div>
+            
+            <form id="reviewForm" class="review-form">
+                <div class="form-group">
+                    <label for="bookTitle">책 제목</label>
+                    <input type="text" id="bookTitle" placeholder="예: 구름빵" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="userName">작성자 (별명)</label>
+                    <input type="text" id="userName" placeholder="예: 독서왕" required>
+                </div>
+
+                <div class="form-group">
+                    <label>기분 선택</label>
+                    <div class="emoji-selector">
+                        <input type="radio" name="mood" id="mood1" value="fun" checked>
+                        <label for="mood1" class="emoji-label">😆 재미있어요</label>
+                        
+                        <input type="radio" name="mood" id="mood2" value="moved">
+                        <label for="mood2" class="emoji-label">🥺 감동이에요</label>
+                        
+                        <input type="radio" name="mood" id="mood3" value="scary">
+                        <label for="mood3" class="emoji-label">😨 무서워요</label>
+                        
+                        <input type="radio" name="mood" id="mood4" value="sad">
+                        <label for="mood4" class="emoji-label">😭 슬퍼요</label>
+                        
+                        <input type="radio" name="mood" id="mood5" value="good">
+                        <label for="mood5" class="emoji-label">👍 최고예요</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="reviewText">한 줄 내용</label>
+                    <input type="text" id="reviewText" placeholder="참신한 내용이 인상 깊었어요!" maxlength="50" required>
+                    <small>50자 이내로 써주세요.</small>
+                </div>
+
+                <button type="submit" class="submit-btn">등록하기 ✨</button>
+            </form>
+        </section>
+
+        <!-- Recent Reviews List -->
+        <section class="reviews-list-container">
+            <div class="section-header">
+                <h3>👀 친구들의 실시간 감상</h3>
+            </div>
+            <div id="reviewList" class="review-grid">
+                <!-- Reviews will be added here by JS -->
+                <!-- Sample Review -->
+                <div class="review-card">
+                    <div class="card-header">
+                        <span class="mood-icon">😆</span>
+                        <span class="book-title">이상한 과자 가게 전천당</span>
+                    </div>
+                    <p class="review-content">"과자 맛이 너무 궁금해서 읽는 내내 군침이 돌았어요!"</p>
+                    <div class="card-footer">
+                        <span class="author">by 호기심천국</span>
+                        <span class="time">방금 전</span>
+                    </div>
+                </div>
+                 <div class="review-card">
+                    <div class="card-header">
+                        <span class="mood-icon">🥺</span>
+                        <span class="book-title">강아지 똥</span>
+                    </div>
+                    <p class="review-content">"민들레가 되는 장면에서 눈물이 핑 돌았어요."</p>
+                    <div class="card-footer">
+                        <span class="author">by 감성소녀</span>
+                        <span class="time">10분 전</span>
+                    </div>
+                </div>
+                 <div class="review-card">
+                    <div class="card-header">
+                        <span class="mood-icon">👍</span>
+                        <span class="book-title">마법천자문</span>
+                    </div>
+                    <p class="review-content">"손오공이 너무 멋져요! 한자가 저절로 외워져요."</p>
+                    <div class="card-footer">
+                        <span class="author">by 한자박사</span>
+                        <span class="time">1시간 전</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>© 2026 꿈꾸는 초등학교 도서관. 친구들과 함께 만드는 공간입니다.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
